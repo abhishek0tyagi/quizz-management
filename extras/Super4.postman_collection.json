@@ -1,0 +1,510 @@
+{
+	"info": {
+		"_postman_id": "af0d5b11-64cf-4680-bdde-c4b087803901",
+		"name": "Super4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20078417"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Forgot Password",
+					"item": [
+						{
+							"name": "Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"jain@gmail.com\"\r\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/forgotPassword",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"forgotPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Otp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\":\"4638\",\r\n    \"description\":\"forgot password\",\r\n    \"email\":\"jain@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/verifyOtp",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"verifyOtp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"jain@gmail.com\",\r\n    \"password\":\"abc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/recoverPassword",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"recoverPassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Change Password",
+					"item": [
+						{
+							"name": "change",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"current_password\":\"abc\", \r\n    \"new_password\":\"abc12\", \r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGNlMjY2MTExNjgzNGFlZTc3ZjU4MSIsImlhdCI6MTY2NTk4Mzg4MiwiZXhwIjoxNjY2MDcwMjgyfQ.BoQOzU1DElW3p9qLDUf8IeLuFfmMigK8mNOsthskJF8\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/changePassword",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"changePassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"item": [
+						{
+							"name": "Find Existing User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"abc\",\r\n    \"email\":\"jain1@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/findExistingUser",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"findExistingUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Otp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\":\"2453\",\r\n    \"description\":\"registration\",\r\n    \"email\":\"jain@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/verifyOtp",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"verifyOtp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" :\"jack\",\r\n    \"email\": \"jain1@gmail.com\",\r\n    \"password\" : \"abc213\",\r\n    \"refCode\": \"super4asd\",\r\n    \"team_name\": \"hdwhdw1\",\r\n    \"date_Of_birth\": \"01/06/1995\",\r\n    \"gender\": \"male\",\r\n    \"phone\" : \"7263458987\",\r\n    \"state\": \"Delhi\",\r\n    \"otp\": 6832\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jain@gmail.com\",\r\n    \"password\" : \"abc213\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://65.1.132.117:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"65",
+								"1",
+								"132",
+								"117"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account Details Verification",
+			"item": [
+				{
+					"name": "Verify Mobile Number",
+					"item": [
+						{
+							"name": "Request",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4NzgzIiwiaWF0IjoxNjY0MTgxMTAxLCJleHAiOjE2NjQyNjc1MDF9._VPLy7dwjx37GC1-6gPJhIFEKRk6Z8RRx2VKMVAlMbU\",\r\n    \"phone\": \"9898989801\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/verifyMobileNumber",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"verifyMobileNumber"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Otp",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4NzgzIiwiaWF0IjoxNjY0MTgxMTAxLCJleHAiOjE2NjQyNjc1MDF9._VPLy7dwjx37GC1-6gPJhIFEKRk6Z8RRx2VKMVAlMbU\",\r\n    \"otp\": \"206365\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/verifyPhoneOtp",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"verifyPhoneOtp"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Verify Email",
+					"item": [
+						{
+							"name": "Request",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4NzgzIiwiaWF0IjoxNjY0MTgxMTAxLCJleHAiOjE2NjQyNjc1MDF9._VPLy7dwjx37GC1-6gPJhIFEKRk6Z8RRx2VKMVAlMbU\",\r\n    \"email\": \"abc@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/verifyEmail",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"verifyEmail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Otp",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4NzgzIiwiaWF0IjoxNjY0MTgxMTAxLCJleHAiOjE2NjQyNjc1MDF9._VPLy7dwjx37GC1-6gPJhIFEKRk6Z8RRx2VKMVAlMbU\",\r\n    \"otp\": \"206365\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://65.1.132.117:5000/api/auth/verifyEmailOtp",
+									"protocol": "http",
+									"host": [
+										"65",
+										"1",
+										"132",
+										"117"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"verifyEmailOtp"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Account Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMzZhMTQxYjI1Zjk3N2I3ZWU1Y2JkMiIsImlhdCI6MTY2NDUyNDc1NCwiZXhwIjoxNjY0NjExMTU0fQ.9bmawlJheclMW42SoFJNn8WJrpHasuYaIbh8xBbGBVg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://65.1.132.117:5000/api/auth/verifyAccountDetails",
+							"protocol": "http",
+							"host": [
+								"65",
+								"1",
+								"132",
+								"117"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"verifyAccountDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get user data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"jain@gmail.com\",\r\n    \"phone\":\"\",\r\n    \"token\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://65.1.132.117:5000/api/auth/getData",
+					"protocol": "http",
+					"host": [
+						"65",
+						"1",
+						"132",
+						"117"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"getData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
